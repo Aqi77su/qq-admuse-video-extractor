@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "QQ AdMuse 视频提取",
+  "version": "1.0.0",
+  "description": "从 AdMuse 创意详情页提取当前视频并调用浏览器下载。",
+  "permissions": ["downloads", "storage", "tabs"],
+  "host_permissions": ["https://admuse.qq.com/*", "https://*.wxs.qq.com/*"],
+  "action": {
+    "default_title": "视频下载按钮设置",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://admuse.qq.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
