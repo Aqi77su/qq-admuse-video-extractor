@@ -1,3 +1,16 @@
-# QQ AdMuse Video Extractor
+# QQ AdMuse 视频提取扩展
 
-Chrome and Edge extension that shows an on-page video download button on QQ AdMuse creative detail pages.
+适用于 `https://admuse.qq.com/` 页面。扩展会读取页面中已加载的 `<video>` 元素的实际播放地址，并让浏览器直接下载该地址。
+
+## 安装
+
+1. 在 Chrome 或 Edge 打开扩展管理页面：`chrome://extensions` 或 `edge://extensions`。
+2. 打开右上角的“开发者模式”。
+3. 点击“加载已解压的扩展程序”，选择本文件夹。
+4. 点击浏览器工具栏中的扩展图标，可在弹窗中显示或隐藏页面内下载按钮，切换会立即生效。
+5. 打开 AdMuse 的视频创意详情页，等视频预览加载完成。视频下方会出现“下载视频”按钮，点击它。
+6. 浏览器会弹出保存窗口，选择保存位置即可。
+
+## 说明
+
+视频源通常是带时效签名的地址，请在页面打开后尽快下载。扩展不上传视频地址或媒体内容。
